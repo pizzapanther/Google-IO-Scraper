@@ -1,0 +1,4 @@
+scrapy
+service_identity
+ipython
+pillow
