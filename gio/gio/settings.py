@@ -8,10 +8,14 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #
 
-BOT_NAME = 'gio'
+BOT_NAME = 'pizzapanther'
 
 SPIDER_MODULES = ['gio.spiders']
 NEWSPIDER_MODULE = 'gio.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'gio (+http://www.yourdomain.com)'
+USER_AGENT = '@PizzaPanther Google IO Crawler '
+
+DEPTH_LIMIT = 1
+
+LOG_LEVEL = 'INFO'
