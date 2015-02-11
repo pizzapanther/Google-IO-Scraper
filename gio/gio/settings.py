@@ -14,8 +14,6 @@ SPIDER_MODULES = ['gio.spiders']
 NEWSPIDER_MODULE = 'gio.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = '@PizzaPanther Google IO Crawler '
-
-DEPTH_LIMIT = 1
+USER_AGENT = 'PizzaPanther\'s Google IO Crawler paul.m.bailey@gmail.com'
 
 LOG_LEVEL = 'INFO'
