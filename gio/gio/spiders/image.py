@@ -13,6 +13,16 @@ class ImageSpider (CrawlSpider):
     "developer.android.com",
     "cloud.google.com",
     "googledevelopers.blogspot.com",
+    "angularjs.org",
+    "appurify.com",
+    "www.chromium.org",
+    "www.dartlang.org",
+    "www.firebase.com",
+    "golang.org",
+    "www.html5rocks.com",
+    "developer.nest.com",
+    "www.polymer-project.org",
+    "www.stackdriver.com",
   ]
   start_urls = (
     'https://developers.google.com/',
