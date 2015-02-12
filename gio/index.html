@@ -65,11 +65,15 @@
         
         $scope.page_turner = function (event) {
           if (event.keyCode == 78) {
-            document.querySelector("#page-next").click();
+            setTimeout(function () {
+              document.querySelector("#page-next").click();
+            }, 10);
           }
           
           else if (event.keyCode == 66) {
-            document.querySelector("#page-prev").click();
+            setTimeout(function () {
+              document.querySelector("#page-prev").click();
+            }, 10);
           }
         };
         
