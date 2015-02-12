@@ -26,12 +26,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
     <script type="text/ng-template" id="page.html">
-      <div class="img" ng-repeat="img in images">
-        <a href="{{ img }}" target="_blank"><img ng-src="{{ img }}" alt=""></a>
-      </div>
-      <div class="clear"></div>
-      <div class="page">
-        <a href="#/page/{{ next }}">Page {{ next }} &raquo;</a>
+      <div id="main-content" ng-keydown="page_turner($event)" tabindex="0">
+        <div class="img" ng-repeat="img in images">
+          <a href="{{ img }}" target="_blank"><img ng-src="{{ img }}" alt=""></a>
+        </div>
+        <div class="clear"></div>
+        <div class="page">
+          <a href="#/page/{{ next }}" id="page-next">Page {{ next }} &raquo;</a>
+        </div>
       </div>
     </script>
     <script>
@@ -54,6 +56,13 @@
         $scope.images = [];
         $rootScope.title = 'Page ' + $scope.page;
         window.scrollTo(0, 0);
+        document.querySelector("#main-content").focus();
+        
+        $scope.page_turner = function (event) {
+          if (event.keyCode == 78) {
+            document.querySelector("#page-next").click();
+          }
+        };
         
         $http.get('json/data' + $scope.page + '.json')
           .success(function (data) {
