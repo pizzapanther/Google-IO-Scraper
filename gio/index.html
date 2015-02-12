@@ -33,6 +33,8 @@
         </div>
         <div class="clear"></div>
         <div class="page">
+          <a href="#/page/{{ prev }}" id="page-prev" ng-if="prev > 0">&laquo; Page {{ prev }}</a>
+          &nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; 
           <a href="#/page/{{ next }}" id="page-next">Page {{ next }} &raquo;</a>
         </div>
       </div>
@@ -54,6 +56,8 @@
       gio.controller('ImageCtrl', function($scope, $routeParams, $rootScope, $http) {
         $scope.page = parseInt($routeParams.page || 1);
         $scope.next = $scope.page + 1;
+        $scope.prev = $scope.page - 1;
+        
         $scope.images = [];
         $rootScope.title = 'Page ' + $scope.page;
         window.scrollTo(0, 0);
@@ -62,6 +66,10 @@
         $scope.page_turner = function (event) {
           if (event.keyCode == 78) {
             document.querySelector("#page-next").click();
+          }
+          
+          else if (event.keyCode == 66) {
+            document.querySelector("#page-prev").click();
           }
         };
         
