@@ -4,6 +4,7 @@ Tool to help find Google IO Codes in images
 ## Directions for finding a Google IO Code in images
 1. Run the scraper
 
+        cd gio
         scrapy crawl image -o images.json
 1. Process the JSON images
 
