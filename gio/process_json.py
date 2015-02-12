@@ -40,14 +40,14 @@ def run ():
           used.append(url)
           images.append(url)
           
-      if count % 300 == 0:
-        print count
-        dump_page(images, page)
-        images = []
-        page += 1
-        
-      count += 1
-      
+          count += 1
+          
+          if count % 300 == 0:
+            print count
+            dump_page(images, page)
+            images = []
+            page += 1
+            
     else:
       page += 1
       dump_page(images, page)
