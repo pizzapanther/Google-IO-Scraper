@@ -1,5 +1,5 @@
 # Google-IO-Scraper
-Tool to help find Google IO Codes
+Tool to help find Google IO Codes in images
 
 ## Directions for finding a Google IO Code in images
 1. Run the scraper
