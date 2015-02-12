@@ -54,4 +54,4 @@ docs/_build/
 target/
 
 gio/images.json
-
+gio/json/*
