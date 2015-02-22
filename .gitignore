@@ -55,3 +55,4 @@ target/
 
 gio/images.json
 gio/json/*.json
+gio/*.json

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 import json
 import urlparse
 
@@ -8,8 +9,8 @@ def dump_page (images, page):
   fw.write(json.dumps({'images': images}))
   fw.close()
   
-def run ():
-  fh = open('images.json', 'r')
+def run (file):
+  fh = open(file, 'r')
   count = 1
   page = 1
   used = []
@@ -54,5 +55,5 @@ def run ():
       break
       
 if __name__ == "__main__":
-  run()
+  run(sys.argv[1])
   

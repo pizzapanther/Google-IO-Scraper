@@ -5,24 +5,25 @@ from scrapy.contrib.linkextractors import LinkExtractor
 
 from gio.items import GioItem
 
-class ImageSpider (CrawlSpider):
-  name = "image"
+class Image1Spider (CrawlSpider):
+  name = "image1"
   allowed_domains = [
     "developers.google.com",
     "developer.chrome.com",
     "developer.android.com",
     "cloud.google.com",
     "googledevelopers.blogspot.com",
-    "angularjs.org",
-    "appurify.com",
-    "www.chromium.org",
+    
+    #"appurify.com",
+    #"www.chromium.org",
+    #"www.firebase.com",
+    #"golang.org",
+    #"www.html5rocks.com",
+    #"www.stackdriver.com",
+    
     "www.dartlang.org",
-    "www.firebase.com",
-    "golang.org",
-    "www.html5rocks.com",
     "developer.nest.com",
     "www.polymer-project.org",
-    "www.stackdriver.com",
   ]
   start_urls = (
     'https://developers.google.com/',
@@ -42,3 +43,18 @@ class ImageSpider (CrawlSpider):
       
       yield item
       
+class Image2Spider (Image1Spider):
+  name = "image2"
+  allowed_domains = [
+    #"angularjs.org",
+    "www.dartlang.org",
+    "developer.nest.com",
+    "www.polymer-project.org",
+  ]
+  start_urls = (
+    #'https://angularjs.org/',
+    'https://www.dartlang.org/',
+    'https://developer.nest.com/',
+    'https://www.polymer-project.org/',
+  )
+  
